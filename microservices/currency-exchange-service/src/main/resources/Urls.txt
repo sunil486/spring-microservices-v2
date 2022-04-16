@@ -1,0 +1,9 @@
+Currency Exchange Service
+==========================
+http://localhost:8000/currency-exchange/from/USD/to/INR
+http://localhost:8000/currency-exchange/from/EUR/to/INR
+http://localhost:8000/currency-exchange/from/AUD/to/INR
+
+h2db access
+============
+http://localhost:8000/h2-console
