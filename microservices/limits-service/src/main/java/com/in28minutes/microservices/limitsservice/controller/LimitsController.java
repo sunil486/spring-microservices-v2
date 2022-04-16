@@ -8,14 +8,14 @@ import com.in28minutes.microservices.limitsservice.bean.Limits;
 import com.in28minutes.microservices.limitsservice.configuration.Configuration;
 
 @RestController
-	public class LimitsController {
+public class LimitsController {
 
-		@Autowired
-		private Configuration configuration;
+	@Autowired
+	private Configuration configuration;
 
-		@GetMapping("/limits")
-		public Limits retrieveLimits() {
-			return new Limits(configuration.getMinimum(), configuration.getMaximum());
+	@GetMapping("/limits")
+	public Limits retrieveLimits() {
+		return new Limits(configuration.getMinimum(), configuration.getMaximum());
 //			return new Limits(1,1000);
-		}
 	}
+}
