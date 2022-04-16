@@ -42,6 +42,6 @@ public class CircuitBreakerService {
 	}
 
 	public String hardcodedResponse(String data, Exception ex) {
-		return "fallback value " + data + " with exception" + ex.getMessage();
+		return "fallback value for data " + data;
 	}
 }
