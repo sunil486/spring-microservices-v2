@@ -1,10 +1,10 @@
-package com.sunil486.microservices.namingservice;
+package com.sunil486.microservices.namingserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class NamingServiceApplicationTests {
+class NamingServerApplicationTests {
 
 	@Test
 	void contextLoads() {

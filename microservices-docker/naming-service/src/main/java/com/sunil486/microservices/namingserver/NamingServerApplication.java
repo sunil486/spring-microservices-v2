@@ -1,4 +1,4 @@
-package com.sunil486.microservices.namingservice;
+package com.sunil486.microservices.namingserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
 @EnableEurekaServer
-public class NamingServiceApplication {
+public class NamingServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(NamingServiceApplication.class, args);
+		SpringApplication.run(NamingServerApplication.class, args);
 	}
 
 }

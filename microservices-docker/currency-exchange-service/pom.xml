@@ -86,11 +86,18 @@
 		</dependencies>
 	</dependencyManagement>
 
+<!-- This maven plugin is used for creating image for our microservice -->
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<image>
+						<name>skg5407/microservices-v2-${project.artifactId}:${project.version}</name>
+					</image>
+					<pullPolicy>IF_NOT_PRESENT</pullPolicy>
+			</configuration>
 			</plugin>
 		</plugins>
 	</build>
