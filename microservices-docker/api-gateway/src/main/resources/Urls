@@ -1,0 +1,23 @@
+API GATEWAY:
+------------
+#localhost is equal to 192.168.1.4 in my case
+
+#These all urls will work iff spring.cloud.gateway.discovery.locator.enabled=true is configured in application.properties
+http://localhost:8765/CURRENCY-EXCHANGE/currency-exchange/from/USD/to/INR
+http://localhost:8765/CURRENCY-CONVERSION/currency-conversion/from/USD/to/INR/quantity/10
+http://localhost:8765/CURRENCY-CONVERSION/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+#If we want below urls to work properly then we need to configure spring.cloud.gateway.discovery.locator.lowerCaseServiceId=true
+#in application.properties Above urls will not work after configuring this property
+
+http://localhost:8765/currency-exchange/currency-exchange/from/USD/to/INR
+http://localhost:8765/currency-conversion/currency-conversion/from/USD/to/INR/quantity/10
+http://localhost:8765/currency-conversion/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+# After using custom routes below will work fine
+http://localhost:8765/currency-exchange/from/USD/to/INR
+http://localhost:8765/currency-conversion/from/USD/to/INR/quantity/10
+http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+#redirecting to feign url
+http://localhost:8765/currency-conversion-new/from/USD/to/INR/quantity/10
